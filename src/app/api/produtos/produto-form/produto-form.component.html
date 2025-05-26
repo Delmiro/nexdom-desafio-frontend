@@ -1,1 +1,12 @@
-<p>produto-form works!</p>
+<h2>Novo Produto</h2>
+<form (ngSubmit)="salvar()">
+  <input [(ngModel)]="model.descricao" name="descricao" placeholder="Descrição" required />
+  <select [(ngModel)]="model.tipoProduto" name="tipoProduto">
+    <option value="ELETRONICO">Eletrônico</option>
+    <option value="ELETRODOMESTICO">Eletrodoméstico</option>
+    <option value="MOVEL">Móvel</option>
+  </select>
+  <input type="number" [(ngModel)]="model.valorFornecedor" name="valorFornecedor" placeholder="Valor Fornecedor" required />
+  <input type="number" [(ngModel)]="model.quantidadeEstoque" name="quantidadeEstoque" placeholder="Quantidade" required />
+  <button type="submit">Salvar</button>
+</form>

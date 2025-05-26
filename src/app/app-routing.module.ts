@@ -6,7 +6,7 @@ import { ProdutoFormComponent } from './api/produtos/produto-form/produto-form.c
 
 const routes: Routes = [
   { path: 'produtos', component: ProdutoListComponent },
-   { path: 'produtos/novo', component: ProdutoFormComponent },
+  { path: 'produtos/novo', component: ProdutoFormComponent },
 ];
 
 @NgModule({
