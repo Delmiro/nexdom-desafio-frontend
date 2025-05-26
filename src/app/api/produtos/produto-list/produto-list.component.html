@@ -1,1 +1,10 @@
-<p>produto-list works!</p>
+<h2>Produtos</h2>
+<table>
+  <tr><th>Código</th><th>Descrição</th><th>Tipo</th><th>Estoque</th></tr>
+  <tr *ngFor="let p of produtos">
+    <td>{{p.codigo}}</td>
+    <td>{{p.descricao}}</td>
+    <td>{{p.tipoProduto}}</td>
+    <td>{{p.quantidadeEstoque}}</td>
+  </tr>
+</table>
