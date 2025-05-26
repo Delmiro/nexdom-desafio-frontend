@@ -11,10 +11,10 @@
   </thead>
   <tbody>
     <tr *ngFor="let m of movimentos">
-      <td>{{ m.produto?.descricao }}</td>
-      <td>{{ m.tipo }}</td>
+      <td>{{ m.produto.descricao }}</td>
+      <td>{{ m.tipoMovimento }}</td>
       <td>{{ m.quantidade }}</td>
-      <td>{{ m.data | date:'short' }}</td>
+      <td>{{ m.dataMovimento | date:'short' }}</td>
     </tr>
   </tbody>
 </table>

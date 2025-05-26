@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { MovimentoEstoqueModel } from '../model/movimento-estoque.model';
 import { MovimentoService } from '../service/movimento-service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-movimento-list',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './movimento-list.component.html',
   styleUrl: './movimento-list.component.css'
 })
