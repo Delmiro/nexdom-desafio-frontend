@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ProdutoService } from '../service/produto-service';
 import { ProdutoDTO } from '../model/produto.model';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-produto-list',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
+  providers: [ProdutoService],
   templateUrl: './produto-list.component.html',
   styleUrl: './produto-list.component.css'
 })
