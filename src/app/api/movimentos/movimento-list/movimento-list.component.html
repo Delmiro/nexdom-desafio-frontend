@@ -1,0 +1,20 @@
+<h2>Movimentos de Estoque</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Produto</th>
+      <th>Tipo</th>
+      <th>Quantidade</th>
+      <th>Data</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let m of movimentos">
+      <td>{{ m.produto?.descricao }}</td>
+      <td>{{ m.tipo }}</td>
+      <td>{{ m.quantidade }}</td>
+      <td>{{ m.data | date:'short' }}</td>
+    </tr>
+  </tbody>
+</table>
