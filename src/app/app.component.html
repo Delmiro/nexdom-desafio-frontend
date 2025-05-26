@@ -1,5 +1,5 @@
 <nav>
-  <a routerLink="/produtos" routerLinkActive="active">Listar Produtos</a> |
-  <a routerLink="/produtos/novo" routerLinkActive="active">Novo Produto</a>
+  <button [routerLink]="['/produtos']" routerLinkActive="active">Listar Produtos</button> |
+  <button [routerLink]="['/produtos/novo']" routerLinkActive="active">Novo Produto</button>
 </nav>
 <router-outlet></router-outlet>

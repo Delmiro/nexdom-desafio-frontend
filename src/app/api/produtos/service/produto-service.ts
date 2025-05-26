@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { ProdutoDTO } from '../model/produto.model';
+import { ProdutoModel } from '../model/produto.model';
 
 
 @Injectable({ providedIn: 'root' })
@@ -10,20 +10,20 @@ export class ProdutoService {
 
   constructor(private http: HttpClient) {}
 
-  listProdutos(): Observable<ProdutoDTO[]> {
-    return this.http.get<ProdutoDTO[]>(`${this.base}/produtos`);
+  listProdutos(): Observable<ProdutoModel[]> {
+    return this.http.get<ProdutoModel[]>(`${this.base}/produtos`);
   }
   getProduto(id: number) {
-    return this.http.get<ProdutoDTO>(`${this.base}/produtos/${id}`);
+    return this.http.get<ProdutoModel>(`${this.base}/produtos/${id}`);
   }
-  createProduto(dto: ProdutoDTO) {
-    return this.http.post<ProdutoDTO>(`${this.base}/produtos`, dto);
+  createProduto(dto: ProdutoModel) {
+    return this.http.post<ProdutoModel>(`${this.base}/produtos`, dto);
   }
   deleteProduto(id: number) {
     return this.http.delete<void>(`${this.base}/produtos/${id}`);
   }
   listProdutosByTipo(tipo: string) {
-    return this.http.get<ProdutoDTO[]>(`${this.base}/produtos/tipo/${tipo}`);
+    return this.http.get<ProdutoModel[]>(`${this.base}/produtos/tipo/${tipo}`);
   }
 
 }

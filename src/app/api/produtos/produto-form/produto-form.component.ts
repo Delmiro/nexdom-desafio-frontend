@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ProdutoDTO } from '../model/produto.model';
+import { ProdutoModel } from '../model/produto.model';
 import { ProdutoService } from '../service/produto-service';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
@@ -14,7 +14,7 @@ import { CommonModule } from '@angular/common';
 })
 export class ProdutoFormComponent {
    
-  model: ProdutoDTO = {
+  model: ProdutoModel = {
     codigo: null, descricao: '', tipoProduto: 'ELETRONICO',
     valorFornecedor: 0, quantidadeEstoque: 0
   };
